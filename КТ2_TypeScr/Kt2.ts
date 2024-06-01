@@ -1,13 +1,13 @@
 abstract class Publisher {
     title: string;
     author: string;
-    year: number;
+    pubYear: number;
     copies: number;
 
-    constructor(title: string, author: string, year: number, copies: number) {
+    constructor(title: string, author: string, pubYear: number, copies: number) {
         this.title = title;
         this.author = author;
-        this.year = year;
+        this.pubYear = pubYear;
         this.copies = copies;
     }
 
@@ -29,12 +29,12 @@ abstract class Publisher {
         this.author = author;
     }
 
-    getYear(): number {
-        return this.year;
+    getpubYear(): number {
+        return this.pubYear;
     }
 
-    setYear(year: number): void {
-        this.year = year;
+    setpubYear(pubYear: number): void {
+        this.pubYear = pubYear;
     }
 
     getCopies(): number {
@@ -52,8 +52,8 @@ abstract class Publisher {
 class Book extends Publisher {
     pages: number;
 
-    constructor(title: string, author: string, year: number, copies: number, pages: number) {
-        super(title, author, year, copies);
+    constructor(title: string, author: string, pubYear: number, copies: number, pages: number) {
+        super(title, author, pubYear, copies);
         this.pages = pages;
     }
 }
@@ -63,8 +63,8 @@ class Book extends Publisher {
 class Magazine extends Publisher {
     issue: number;
 
-    constructor(title: string, author: string, year: number, copies: number, issue: number) {
-        super(title, author, year, copies);
+    constructor(title: string, author: string, pubYear: number, copies: number, issue: number) {
+        super(title, author, pubYear, copies);
         this.issue = issue;
     }
 }
@@ -160,7 +160,7 @@ class Library {
 
 const book1 = new Book('Book ', 'Author ', 2020, 5, 200);
 const magazine1 = new Magazine('Magazine ', 'Author ', 2021, 3, 10);
-const reader1 = new Reader('bonny', 'Carrot');
+const reader1 = new Reader('boy', 'girl');
 const library = new Library();
 
 
